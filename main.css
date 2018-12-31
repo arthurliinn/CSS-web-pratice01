@@ -11,6 +11,10 @@ body {
   font-weight: 500;
 }
 
+button {
+  cursor: pointer;
+}
+
 .sitenav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom-color: rgba(181, 233, 253, 0.4);
@@ -32,7 +36,9 @@ ul {
 }
 
 a {
+  background: 0 0;
   text-decoration: none;
+  color: inherit;
 }
 
 .sitenav a {
@@ -60,4 +66,112 @@ a {
 
 .sitenav li:first-child {
   margin-left: 0;
+}
+
+.secondnav {
+  min-height: 10rem;
+  color: #ffff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.8em;
+  padding-left: 2.85rem;
+  padding-right: 2.85rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(181, 233, 253, 0.4);
+}
+
+.baseLayout_breadcrumbs {
+  position: absolute;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  width: 100%;
+  z-index: 0;
+}
+
+.BaseLayout__breadcrumbsBd {
+  max-width: 1384px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.BaseLayout__breadcrumbsItem {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.HeaderBreadcrumbToggle {
+  color: #46c8fa;
+  transition: color 3s;
+  position: relative;
+}
+
+.HeaderBreadcrumbToggle_toggle {
+  outline: 0;
+  background: 0 0;
+  border: none;
+  border-radius: 0;
+  padding: 0 0 0 3.6rem;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  display: block;
+  height: 3.6rem;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  width: 100%;
+}
+
+.secondarynav_body {
+  max-width: 1384px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.secondnav_right {
+  display: flex;
+  margin-top: 2.2rem;
+  margin-left: auto;
+  width: calc(100% / 2 - 4.8rem / 2 + 0rem);
+}
+
+.secondnav_right a {
+  display: block;
+  padding-top: 2rem;
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.baseLayout_content {
+  width: 100%;
+  overflow: hidden;
+}
+
+.headerSlider {
+  overflow: hidden;
+  background-color: #18354e;
+}
+
+@media screen and (min-width: 48em) {
+  .BaseLayout_breadcrumbsBd {
+    position: relative;
+    float: left;
+  }
+
+  .baseLayout_content {
+    margin-top: -17rem;
+  }
+  .headerSlider {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    padding-top: 32rem;
+  }
+  .baseLayout_breadcrumbs {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+  }
 }
