@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 body {
   padding: 0px;
   margin: 0px;
@@ -13,6 +19,10 @@ body {
 
 button {
   cursor: pointer;
+}
+
+.baseLayayout_navBar {
+  background-color: #18354e;
 }
 
 .sitenav {
@@ -68,12 +78,12 @@ a {
   margin-left: 0;
 }
 
-.secondnav {
-  min-height: 10rem;
+.secondNav {
+  min-height: 8rem;
   color: #ffff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
-  line-height: 2.8em;
+  line-height: 1rem;
   padding-left: 2.85rem;
   padding-right: 2.85rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -86,27 +96,29 @@ a {
   line-height: 1.6rem;
   font-weight: 300;
   width: 100%;
+  background-color: #18354e;
   z-index: 0;
 }
 
-.BaseLayout__breadcrumbsBd {
+.baseLayout_breadcrumbsBd {
   max-width: 1384px;
-  margin-left: auto;
+  margin-left: 10rem;
   margin-right: auto;
+  font-weight: 300;
 }
 
-.BaseLayout__breadcrumbsItem {
+.baseLayout__breadcrumbsItem {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
 
-.HeaderBreadcrumbToggle {
+.headerBreadcrumbToggle {
   color: #46c8fa;
   transition: color 3s;
   position: relative;
 }
 
-.HeaderBreadcrumbToggle_toggle {
+.headerBreadcrumbToggle_toggle {
   outline: 0;
   background: 0 0;
   border: none;
@@ -156,22 +168,38 @@ a {
   background-color: #18354e;
 }
 
+.headerSlider_bd {
+  position: relative;
+  max-width: 1384px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steppedCarousel {
+  position: relative;
+}
+
 @media screen and (min-width: 48em) {
-  .BaseLayout_breadcrumbsBd {
+  .baseLayout_breadcrumbsBd {
     position: relative;
     float: left;
-  }
-
-  .baseLayout_content {
-    margin-top: -17rem;
   }
   .headerSlider {
     padding-left: 4.8rem;
     padding-right: 4.8rem;
-    padding-top: 32rem;
+    padding-top: 5rem;
   }
   .baseLayout_breadcrumbs {
     padding-left: 4.8rem;
     padding-right: 4.8rem;
+  }
+  .headerSlider_slidesWrapper {
+  }
+}
+
+@media screen and (min-width: 92.5em) {
+  .headerSlider_slidesWrapper {
+    left: calc(-1 * (100vw - 1384px) / 2);
+    width: calc(100% + (100vw - 1384px) / 2);
   }
 }
