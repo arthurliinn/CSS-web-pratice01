@@ -52,14 +52,23 @@ a {
 }
 
 .sitenav a {
-  font-size: 1rem;
-  line-height: 2.4rem;
+  font-size: 0.9rem;
+  line-height: 2rem;
   font-weight: 300;
   color: #46c8fa;
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
   position: relative;
+}
+
+.siteNav_focusLine {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-bottom: 1px solid currentColor;
 }
 
 .sitenav ul {
