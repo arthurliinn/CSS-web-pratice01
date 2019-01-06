@@ -69,6 +69,12 @@ a {
   right: 0;
   top: 100%;
   border-bottom: 1px solid currentColor;
+  transform-origin: 0 0;
+}
+
+.siteBar_left a:hover,
+.siteBar_right a:hover {
+  color: #fff;
 }
 
 .sitenav ul {
@@ -116,7 +122,7 @@ a {
   font-weight: 300;
 }
 
-.baseLayout__breadcrumbsItem {
+.baseLayout_breadcrumbsItem {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
