@@ -201,17 +201,20 @@ a {
 #steppedCarousel_slides {
   white-space: nowrap;
   word-wrap: inherit;
+  transition: transform .4s ease-in-out;
 }
 
 .steppedCarousel_slide {
   display: inline-block;
   width: 100%;
+  animation: 15s sliderSlide infinite;
 }
 
 .headerSlider_slide {
   position: relative;
   display: inline-block;
   width: 100%;
+
 }
 
 .headerSlider_slideTitle {
@@ -351,3 +354,4 @@ a {
     width: calc(100% / 1.33333333 - 1.6rem / 1.33333333 + (100vw - 1384px) / 2);
   }
 }
+
