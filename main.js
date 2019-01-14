@@ -60,22 +60,24 @@ function sliderSlide() {
 
 var topNav = document.getElementsByName("topnavBtn");
 var i = 0;
+var focusLine = document.getElementById("siteNav_focusLine");
+focusLine.style.transform = "translateX(400px) scaleX(0.0620074)"
 
 for (i = 0; i < topNav.length; i++) {
   topNav[i].addEventListener("mouseover", moveLine, false);
 
 };
 
-function moveLine() {
+function moveLine(e) {
   console.log("hello");
-  var topNav = document.getElementsByName("topnavBtn");
   var focusLine = document.getElementById("siteNav_focusLine");
-  var i = 0;
-  for (i = 0; i < topNav.length; i++) {
-    var CurrentBtnStyle = topNav[i].style.transform;
-    focusLine.style.transform = CurrentBtnStyle;
+  var currentBtn = e.target;
+  var r = currentBtn.offsetLeft, n = currentBtn.offsetWidth, i = n / currentBtn.offsetParent.offsetWidth;;
+  focusLine.style.transform = "translateX(" + r + "px) scaleX(" + i + ")"
 
-  };
-  console.log(CurrentBtnStyle);
+  console.log(currentBtn);
+  console.log(focusLine.style.transform);
+  console.log(r);
+  console.log(n);
 };
 
