@@ -65,6 +65,7 @@ focusLine.style.transform = "translateX(400px) scaleX(0.0620074)"
 
 for (i = 0; i < topNav.length; i++) {
   topNav[i].addEventListener("mouseover", moveLine, false);
+  topNav[i].addEventListener("mouseleave", moveLineToOrigin, false);
 
 };
 
@@ -81,3 +82,39 @@ function moveLine(e) {
   console.log(n);
 };
 
+function moveLineToOrigin(e) {
+  var focusLine = document.getElementById("siteNav_focusLine");
+  focusLine.style.transform = "translateX(400px) scaleX(0.0620074)";
+}
+
+
+//secondNav hoverbackground
+
+
+var secondNav = document.getElementsByName("secondNavBtn");
+var j = 0;
+var hoverBackgorund = document.getElementById("baseLayout_hoverBackground");
+console.log(secondNav);
+
+for (j = 0; j < secondNav.length; j++) {
+  secondNav[j].addEventListener("mouseover", moveBg, false);
+  console.log(j);
+};
+
+
+function moveBg() {
+  hoverBackgorund.style.height = "434.391px";
+  for (i = 0; i < topNav.length; i++) {
+    topNav[i].style.color = "#fff";
+  };
+};
+
+hoverBackgorund.addEventListener("mouseleave", bgDissappear, false);
+
+function bgDissappear() {
+  hoverBackgorund.style.height = "0px";
+  for (i = 0; i < topNav.length; i++) {
+    topNav[i].style.color = "#46c8fa";
+  };
+
+};

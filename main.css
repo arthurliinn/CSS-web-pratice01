@@ -118,7 +118,7 @@ a {
   font-weight: 300;
   width: 100%;
   background-color: #18354e;
-  z-index: 0;
+  z-index: -1;
 }
 
 .baseLayout_breadcrumbsBd {
@@ -131,6 +131,17 @@ a {
 .baseLayout_breadcrumbsItem {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
+}
+
+#baseLayout_hoverBackground{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0;
+  background: linear-gradient(to right,#46c8fa,#0064be);
+  box-shadow: 0 1rem 3rem rgba(0,100,190,.5);
+  transition: height .3s ease-in-out ;
 }
 
 .headerBreadcrumbToggle {
