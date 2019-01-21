@@ -61,7 +61,7 @@ function sliderSlide() {
 var topNav = document.getElementsByName("topnavBtn");
 var i = 0;
 var focusLine = document.getElementById("siteNav_focusLine");
-focusLine.style.transform = "translateX(400px) scaleX(0.0620074)"
+focusLine.style.transform = "translateX(338px) scaleX(0.0588544)";
 
 for (i = 0; i < topNav.length; i++) {
   topNav[i].addEventListener("mouseover", moveLine, false);
@@ -84,7 +84,7 @@ function moveLine(e) {
 
 function moveLineToOrigin(e) {
   var focusLine = document.getElementById("siteNav_focusLine");
-  focusLine.style.transform = "translateX(400px) scaleX(0.0620074)";
+  focusLine.style.transform = "translateX(338px) scaleX(0.0588544)";
 }
 
 
@@ -94,6 +94,8 @@ function moveLineToOrigin(e) {
 var secondNav = document.getElementsByName("secondNavBtn");
 var j = 0;
 var hoverBackgorund = document.getElementById("baseLayout_hoverBackground");
+var submenu = document.getElementsByName("secondaryNav_submenu");
+var k = 0;
 console.log(secondNav);
 
 for (j = 0; j < secondNav.length; j++) {
@@ -102,11 +104,23 @@ for (j = 0; j < secondNav.length; j++) {
 };
 
 
-function moveBg() {
+function moveBg(e) {
   hoverBackgorund.style.height = "434.391px";
   for (i = 0; i < topNav.length; i++) {
     topNav[i].style.color = "#fff";
   };
+  var currentNavBtn = e.target;
+  console.log(currentNavBtn);
+  console.log(submenu);
+  //console.log(currentBtn[0].toString());
+  /* for (k = 0; k < submenu.length; k++) {
+     if(cuttentNavBtn == 
+     submenu[k].style.height = "auto";
+   };*/
+
+  //currentNavBtn.querySelector("ul").height = "auto";
+
+
 };
 
 hoverBackgorund.addEventListener("mouseleave", bgDissappear, false);
