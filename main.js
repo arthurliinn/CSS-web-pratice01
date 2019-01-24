@@ -95,6 +95,7 @@ var secondNav = document.getElementsByName("secondNavBtn");
 var j = 0;
 var hoverBackgorund = document.getElementById("baseLayout_hoverBackground");
 var submenu = document.getElementsByName("secondaryNav_submenu");
+var submenu_list = document.querySelectorAll(".secondaryNav_submenu")
 var k = 0;
 console.log(secondNav);
 
@@ -106,19 +107,22 @@ for (j = 0; j < secondNav.length; j++) {
 
 function moveBg(e) {
   hoverBackgorund.style.height = "434.391px";
+  //submenu.style.height = "auto";
   for (i = 0; i < topNav.length; i++) {
     topNav[i].style.color = "#fff";
   };
   var currentNavBtn = e.target;
-  console.log(currentNavBtn);
-  console.log(submenu);
-  //console.log(currentBtn[0].toString());
-  /* for (k = 0; k < submenu.length; k++) {
-     if(cuttentNavBtn == 
-     submenu[k].style.height = "auto";
-   };*/
 
-  //currentNavBtn.querySelector("ul").height = "auto";
+
+  //console.log(currentBtn[0].toString());
+  for (k = 0; k < submenu.length; k++) {
+    submenu[k].style.opacity = "0";
+    if (currentNavBtn == secondNav[k]) {
+      submenu[k].style.height = "auto";
+      submenu[k].style.opacity = "1";
+    };
+
+  };
 
 
 };
@@ -129,6 +133,11 @@ function bgDissappear() {
   hoverBackgorund.style.height = "0px";
   for (i = 0; i < topNav.length; i++) {
     topNav[i].style.color = "#46c8fa";
+  };
+  for (k = 0; k < submenu.length; k++) {
+    submenu[k].style.height = "0";
+    submenu[k].style.opacity = "0";
+
   };
 
 };
